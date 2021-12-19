@@ -12,12 +12,13 @@ Assumptions :
 3. End of month calculation is done for current month.
 
 
-This project uses 
-. Java 11
-. Spring Boot
-. H2 database
-. Spring JPA
-. Flyway (Not implemented)
+This project uses :
+
+->  Java 11
+-> Spring Boot
+-> H2 database
+-> Spring JPA
+->  Flyway (Not implemented)
 
 
 Next Steps :
@@ -25,5 +26,6 @@ Next Steps :
 2. End of the day balances can come through Asyn model (JMS)
 3. Fixed interest can be made configurable
 4. End of the month calculation can be updagred for the provided month.
-5. Add test cases 
+5. Flyway implementation
+6. Add test cases 
 
