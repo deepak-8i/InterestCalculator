@@ -2,7 +2,7 @@ package com.demo.calculator.controller;
 
 
 import com.demo.calculator.service.AccountOpeningService;
-import com.demo.calculator.dto.AccountRequest;
+import com.demo.calculator.dto.AccountDto;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -20,7 +20,7 @@ public class AccountOpeningController {
 
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping("/processAccountOpening")
-    AccountRequest openAccount(@RequestBody AccountRequest accountDto) {
+    AccountDto openAccount(@RequestBody AccountDto accountDto) {
         return accountOpeningService.save(accountDto);
     }
 

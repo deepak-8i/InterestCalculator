@@ -1,7 +1,7 @@
 package com.demo.calculator.service;
 
 import com.demo.calculator.dao.AccountEndDayBalanceRepository;
-import com.demo.calculator.dto.EndOfDayBalanceRequest;
+import com.demo.calculator.dto.EndOfDayBalanceDto;
 import com.demo.calculator.model.AccountEndDayBalance;
 import com.demo.calculator.utils.CalculateUtils;
 import com.demo.calculator.utils.ConverterUtils;
@@ -19,7 +19,7 @@ public class AccountBalanceServiceImpl implements AccountBalanceService {
     private static double DAILY_INTEREST_RATE = 5.0;
 
     @Override
-    public void calculateEODBalances(EndOfDayBalanceRequest endOfDayBalanceRequest) {
+    public void calculateEODBalances(EndOfDayBalanceDto endOfDayBalanceRequest) {
 
         List<AccountEndDayBalance> accountEndDayBalances = ConverterUtils.convertToAccountEndBalances(endOfDayBalanceRequest);
         calculateInterest(accountEndDayBalances);

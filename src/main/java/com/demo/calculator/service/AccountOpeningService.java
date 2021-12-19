@@ -1,8 +1,8 @@
 package com.demo.calculator.service;
 
-import com.demo.calculator.dto.AccountRequest;
+import com.demo.calculator.dto.AccountDto;
 
 public interface AccountOpeningService {
 
-    AccountRequest save(AccountRequest accountDto);
+    AccountDto save(AccountDto accountDto);
 }

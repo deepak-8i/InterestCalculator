@@ -1,8 +1,8 @@
 package com.demo.calculator.service;
 
-import com.demo.calculator.dto.EndOfDayBalanceRequest;
+import com.demo.calculator.dto.EndOfDayBalanceDto;
 
 public interface AccountBalanceService {
 
-    void calculateEODBalances(EndOfDayBalanceRequest endOfDayBalanceRequest);
+    void calculateEODBalances(EndOfDayBalanceDto endOfDayBalanceRequest);
 }

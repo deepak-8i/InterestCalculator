@@ -16,12 +16,12 @@ import java.util.Date;
 @Builder
 @JsonInclude(value = JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class EndOfDayBalanceRequest {
+public class EndOfDayBalanceDto {
 
     @JsonProperty("balanceDate")
     private Date dayEndDate;
 
     @JsonProperty("accountBalances")
-    private AccountEndDayBalanceRequest[] accountEndDayBalances;
+    private AccountEndDayBalanceDto[] accountEndDayBalances;
 
 }

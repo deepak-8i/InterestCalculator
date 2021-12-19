@@ -17,7 +17,7 @@ import java.math.BigDecimal;
 @Data
 @JsonInclude(value = JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class AccountEndDayBalanceRequest {
+public class AccountEndDayBalanceDto {
 
     @JsonProperty("identification")
     private Long accountNumber;

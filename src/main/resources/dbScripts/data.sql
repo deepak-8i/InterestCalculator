@@ -1,22 +1,17 @@
-CREATE TABLE IF NOT EXISTS `account` (
-    `account_number` bigint NOT NULL PRIMARY KEY,
-    `bsb` varchar(50),
-    `account_open_date` TIMESTAMP
-);
+Insert into Account values (111222331,'182182', '2021-12-13');
+Insert into Account values (111222332,'182182', '2021-12-13');
+Insert into Account values (111222333,'182182', '2021-12-13');
+Insert into Account values (222000111,'182182', '2021-12-13');
+Insert into Account values (222000999,'182182', '2021-12-13');
 
-CREATE TABLE IF NOT EXISTS `account_day_end_balance` (
-    `account_number` bigint NOT NULL,
-    `balance` DECIMAL(20,2),
-    `daily_interest` DECIMAL(20,2),
-    `day_end_date` TIMESTAMP NOT NULL,
-     PRIMARY KEY (account_number, day_end_date),
-     FOREIGN KEY (account_number) REFERENCES account (account_number)
-);
+Insert into Account_day_end_balance values (222000999,123.34,0.02, '2021-12-13');
+Insert into Account_day_end_balance values (222000111,12.34,0.00, '2021-12-13');
+Insert into Account_day_end_balance values (111222333,1000,0.14, '2021-12-13');
 
-CREATE TABLE IF NOT EXISTS `account_monthly_interest` (
-    `id` BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
-    `account_number` BIGINT NOT NULL,
-    `monthly_interest_balance` DECIMAL(20,2),
-    `month_end_date` timestamp,
-     FOREIGN KEY (account_number) REFERENCES account (account_number)
-);
+Insert into Account_day_end_balance values (222000999,123.34,0.02, '2021-12-12');
+Insert into Account_day_end_balance values (222000111,12.34,0.00, '2021-12-12');
+Insert into Account_day_end_balance values (111222333,1000,0.14, '2021-12-12');
+
+Insert into Account_day_end_balance values (222000999,123.34,0.02, '2021-12-10');
+Insert into Account_day_end_balance values (222000111,12.34,0.00, '2021-12-10');
+Insert into Account_day_end_balance values (111222333,1000,0.14, '2021-12-10');

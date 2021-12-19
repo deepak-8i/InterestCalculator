@@ -1,5 +1,8 @@
-package com.demo.calculator.model;
+package com.demo.calculator.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -12,25 +15,22 @@ import java.util.Date;
 import static javax.persistence.GenerationType.IDENTITY;
 
 
-@Builder
+
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
-@Entity
-@Table(name = "account_monthly_interest")
-public class AccountMonthlyInterest {
+@Builder
+@JsonInclude(value = JsonInclude.Include.NON_NULL)
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class AccountMonthlyInterestDto {
 
-    @Id
-    @GeneratedValue(strategy = IDENTITY)
-    private Long id;
-
-    @Column(name = "account_number", nullable = false )
+    @JsonProperty("identification")
     private Long accountNumber;
 
-    @Column(name = "monthly_interest_balance", nullable = false)
+    @JsonProperty("balance")
     private BigDecimal balance;
 
-    @Column(name = "month_end_date", nullable = false)
+    @JsonProperty("monthlyBalanceDate")
     private Date dayEndDate;
 
 }

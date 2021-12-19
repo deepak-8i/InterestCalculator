@@ -14,7 +14,7 @@ import java.util.Date;
 @NoArgsConstructor
 @JsonInclude(value = JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class AccountRequest {
+public class AccountDto {
 
     @JsonProperty("identification")
     private long accountNumber;

@@ -1,6 +1,6 @@
 package com.demo.calculator.controller;
 
-import com.demo.calculator.dto.EndOfDayBalanceRequest;
+import com.demo.calculator.dto.EndOfDayBalanceDto;
 import com.demo.calculator.service.AccountBalanceService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +17,7 @@ public class AccountBalanceController {
 
     @ResponseStatus(HttpStatus.CREATED)
     @PutMapping("/processAccountEndOfDayBalances")
-    ResponseEntity<Object> calculateEndOfDayBalances(@RequestBody EndOfDayBalanceRequest endOfDayBalanceRequest) {
+    ResponseEntity<Object> calculateEndOfDayBalances(@RequestBody EndOfDayBalanceDto endOfDayBalanceRequest) {
         accountBalanceService.calculateEODBalances(endOfDayBalanceRequest);
         return new ResponseEntity<>(HttpStatus.OK);
     }

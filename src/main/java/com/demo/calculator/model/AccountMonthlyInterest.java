@@ -21,9 +21,6 @@ import static javax.persistence.GenerationType.IDENTITY;
 public class AccountMonthlyInterest {
 
     @Id
-    @GeneratedValue(strategy = IDENTITY)
-    private Long id;
-
     @Column(name = "account_number", nullable = false )
     private Long accountNumber;
 
@@ -32,5 +29,4 @@ public class AccountMonthlyInterest {
 
     @Column(name = "month_end_date", nullable = false)
     private Date dayEndDate;
-
 }
